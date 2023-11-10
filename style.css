@@ -1,0 +1,665 @@
+body{
+  margin: 0;
+  font-size: 14px;
+  min-width: 480px;
+  min-height: 100vh;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  background: url("../assets/img/bg.jpg") center/cover, rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+  overflow-x: hidden;
+  
+  
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+
+
+.city{
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 0px;
+  outline: 0px;
+  font-size: 30px;
+}
+
+.weather-icon{
+  font-size: 50px;
+}
+
+footer{
+  margin-top: 50px;
+  text-align: center;
+  
+}
+
+.time{
+  
+  font-size: 100px;
+  color: #fff;
+  transition: 2s;
+    
+}
+
+.greet{
+  margin-left: 150px;
+  display: flex;
+  transition: 2s;
+  
+}
+.names {
+  
+    font-size: 30px;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: 0px;
+    outline: 0px;
+  }
+  
+  .date{
+    text-align: center;
+    font-size: 50px;
+    transition: 2s;
+    
+  }
+
+.greeting{
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+
+
+
+  .slider-icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    opacity: .8;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .slide-prev {
+    left: 20px;
+    background-image: url("https://raw.githubusercontent.com/Dasha-Vr/stage1-tasks/1df526e88706d485c69ad2a929dcbd6c26b3749c/assets/svg/slider-prev.svg");
+  }
+  
+  .slide-next {
+    right: 20px;
+    background-image: url("https://raw.githubusercontent.com/Dasha-Vr/stage1-tasks/1df526e88706d485c69ad2a929dcbd6c26b3749c/assets/svg/slider-next.svg");
+  }
+
+
+  .change-quote {
+    transition: 2s;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    background-image: url("https://raw.githubusercontent.com/Dasha-Vr/stage1-tasks/1df526e88706d485c69ad2a929dcbd6c26b3749c/assets/svg/reload.svg");  
+  }
+
+  
+  .player-icon,
+  .change-quote {
+    width: 32px;
+    height: 32px;
+    background-size: 32px 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    opacity: .8;
+    cursor: pointer;
+    transition: .3s;  
+  }
+
+  
+  .change-quote:active {
+    border: 0;
+    outline: 0;  
+    transform: scale(1.1);
+  }
+
+
+  .play {
+    width: 40px;
+    height: 40px;
+    background-size: 40px 40px;
+    background-image: url("https://raw.githubusercontent.com/Dasha-Vr/stage1-tasks/1df526e88706d485c69ad2a929dcbd6c26b3749c/assets/svg/play.svg");
+  }
+  
+  .pause {
+    background-image: url("https://raw.githubusercontent.com/Dasha-Vr/stage1-tasks/1df526e88706d485c69ad2a929dcbd6c26b3749c/assets/svg/pause.svg");
+  }
+
+
+
+  .play-prev {
+    background-image: url("https://raw.githubusercontent.com/Dasha-Vr/stage1-tasks/1df526e88706d485c69ad2a929dcbd6c26b3749c/assets/svg/play-prev.svg");
+  }
+  
+  .play-next {
+    background-image: url("https://raw.githubusercontent.com/Dasha-Vr/stage1-tasks/1df526e88706d485c69ad2a929dcbd6c26b3749c/assets/svg/play-next.svg");
+  }
+
+
+.wrapper{
+  max-width: 1222px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.player{
+  max-width: 400px;
+  max-height: 400px;
+  transition: 2s;
+}
+
+.player-controls{
+  max-width: 150px;
+  margin: 0;
+}
+
+.weather{
+  margin-right: -170px;
+  transition: 2s;
+}
+
+.container{
+  margin: 0 auto;
+  max-height: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+  .play-item {
+    position: relative;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    list-style: none;
+    opacity: .8;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  .play-item:hover {
+    opacity: 1;
+  }
+  
+  .play-item::before {
+    content: "\2713";  
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-weight: 900;
+    
+  }
+
+  .play-item::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+    background-image: url("https://raw.githubusercontent.com/Dasha-Vr/stage1-tasks/1df526e88706d485c69ad2a929dcbd6c26b3749c/assets/svg/play.svg");
+    
+    
+  }
+  
+ul{
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  padding-inline-start: 5px;
+}
+
+  
+  .item-active::before {
+    color: red;
+  }
+  #soundVolume{
+    -webkit-appearance: none;
+    appearance: none;
+    z-index: 4;
+    height: 5px;
+    background: #fff;
+    width: 60pt;
+    border-radius: 30px;
+    top: 25%;
+    left: 30px;
+  }
+
+
+  #progress-bar {
+    -webkit-appearance: none;
+    appearance: none;
+    z-index: 4;
+    height: 10px;
+    background: #fff;
+    width: 160pt;
+    border-radius: 30px;
+  
+}
+
+#soundVolume::-webkit-slider-thumb,
+#progress-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  margin-top: -3px;
+  margin-left: 0px;
+  height: 10px;
+  width: 7px;
+  border: 0;
+  background: -webkit-linear-gradient(45deg,  rgb(213, 213, 213), rgb(255, 0, 0));
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+
+
+#progress-bar::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  max-height: 5px;
+  border-radius: 30px;
+}
+
+#progress-bar:focus {
+  outline: none;
+}
+
+
+.muteButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+  background-image: url("https://raw.githubusercontent.com/Dasha-Vr/music/becf125aca43ddf54df9979e92d94b1276fea4ca/sound-loud-filled-svgrepo-com.svg");
+}
+
+.mute-ico{
+  background-image: url("https://raw.githubusercontent.com/Dasha-Vr/music/9e682a39dec7187d0ba4f74e99f532bf0ad8c4f7/sound-off-filled-svgrepo-com.svg");
+}
+
+
+
+.year-link {
+  display: flex;
+  align-items: center;
+}
+
+.footer-text {
+  font-weight: 400;
+  font-size: 12px;
+  color: white;}
+
+
+  .github-link {
+    padding-left: 20px;
+    font-weight: 400;
+    font-size: 12px;
+    text-decoration: none;
+    color: white;
+}
+
+
+.logo{
+  width: 54px;
+  height: 20px;
+  display: block;
+}
+
+
+
+.logo-rs{
+  max-height: 20px;
+}
+
+.footer-cont{
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.sound{
+  
+  display: flex;
+}
+
+
+.language{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  background-size: 50px 50px;
+  background-image: url("https://raw.githubusercontent.com/Dasha-Vr/music/db3ce6e281b418e342ddea1c3f2842f36eff933c/big-ben-london-svgrepo-com.svg")
+}
+
+.language:hover{
+  border: 0;
+  outline: 0;  
+  transform: scale(1.3);
+}
+
+
+
+.lang-ru{
+  background-image: url("https://raw.githubusercontent.com/Dasha-Vr/music/db3ce6e281b418e342ddea1c3f2842f36eff933c/balalaika-svgrepo-com.svg");
+}
+
+.logo-cont{
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+
+@media (max-width: 859px) {
+  .time {
+    min-height: 80px;
+    font-size: 72px;    
+  }
+
+  .slider-icon {
+    top: 90%
+  }
+  
+  .play-item::after {
+    left: 70%;
+  }
+  .date{
+    font-size: 25px;
+  }
+
+  
+
+  .greeting-container {
+    min-height: 40px;
+    font-size: 32px;
+  }
+
+  .greeting {
+    padding: 5px;
+  }
+
+  .name {
+    font-size: 32px;
+    padding: 5px;
+  }
+}
+
+
+@media (max-width: 753px) {
+
+  .greeting{
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .names{
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 637px) {
+.buttons-control{
+  margin-left: 47px;
+}
+
+
+.slider-icon {
+  top: 100%
+}
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main{
+    margin-top: 310px;
+  }
+  .play-item::after {
+    left: 90%;
+  }
+
+  .weather{
+    margin-top: 30px;
+    margin-left: 50px;
+    
+  }
+
+}
+
+@media (max-width: 558px) {
+  .greeting {
+    font-size: 15px;
+    margin-right: -2px;
+    
+    
+  }
+
+  .greet{
+    margin-right: 5px;
+  }
+
+  .names {
+    font-size: 15px;
+    
+    
+  }
+
+}
+
+@media (max-width: 453px) {
+  .language{
+    margin-right: 42px;
+  }
+
+  .slide-next{
+    right: -30px;
+  }
+
+}
+
+@media (max-width: 380px) {
+  .slide-next{
+    right: -50px;
+  }
+}
+
+@media (max-width: 362px) {
+  .slide-next{
+    right: -70px;
+  }
+}
+
+@media (max-width: 331px) {
+  .slide-next{
+    right: -130px;
+  }
+}
+
+
+
+.player-icon:hover,
+.slider-icon:hover,
+.change-quote:hover {
+  opacity: 1;
+}
+
+.api-button:active,
+.api-button-flickr:active{
+  transform: scale(1.1);
+}
+
+.player-icon:active,
+.slider-icon:active,
+.change-quote:active {
+  border: 0;
+  outline: 0;  
+  transform: scale(1.1);
+}
+
+.api-button{
+border-radius: 30px;
+border-color: #FFFFFF;
+background-color: transparent;
+color: #FFFFFF;
+padding: 6px 5px;
+margin-left: 5px;
+margin-right: 3px;
+cursor: pointer;
+}
+
+.api-button-flickr{
+  border-radius: 30px;
+  border-color: #FFFFFF;
+  background-color: transparent;
+  color: #FFFFFF;
+  padding: 6px 5px;
+  margin-left: 3px;
+  cursor: pointer;
+}
+
+
+.settings{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-left: 70px;
+  width: 30px;
+  height: 30px;
+  background-size: 30px 30px;
+  background-image: url('https://raw.githubusercontent.com/Dasha-Vr/music/9befaa3bbb729cae071f7419bcc203aa46e29933/settings-svgrepo-com.svg');
+}
+
+.settings:hover{
+  border: 0;
+  outline: 0;  
+  transform: scale(1.3);
+}
+
+.settings-block{
+  display: none;
+  position: absolute;
+  margin-bottom: 500px;
+  margin-left: -50px;
+  width: 300px;
+  height: 300px;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+
+}
+
+.settings-block-wis{
+  display: block;
+  
+}
+
+.hideBlocks,
+.Sett-name,
+.API,
+.language-descr{
+  color: black;
+}
+
+.hidetheweather{
+  opacity: calc(0);
+  transition: 2s;
+}
+
+
+.hideplayer{
+  opacity: calc(0);
+  transition: 2s;
+}
+
+.hideTime{
+  opacity: calc(0);
+  transition: 2s;
+}
+
+.hidedate{
+  opacity: calc(0);
+  transition: 2s;
+}
+
+.hideGreetings{
+  opacity: calc(0);
+  transition: 2s;
+}
+
+.hideQUOTE{
+  opacity: calc(0);
+  transition: 2s;
+}
+
+.quote{
+  transition: 2s;
+}
+
+.author{
+  transition: 2s;
+}
+
+.buttonSET{
+  border-color: transparent;
+  border-radius: 20px;
+  border-color: black;
+  padding: 5px 6px;
+}
+
+.hideBlocks{
+  margin-top: 20px;
+}
+
+.language-descr{
+  margin-top: 20px;
+}
+
+.API{
+  margin-top: 20px;
+}
+
+.Sett-name{
+  margin-top: 20px;
+}

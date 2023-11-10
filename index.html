@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/owfont-regular.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Momentum</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inter:wght@400;700&display=swap"rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+    <header class = "header">
+        <div class="container">
+        <div class="player">
+            <div class="buttons-control">
+            <button class="play-prev player-icon"></button>
+            <button class="play player-icon"></button>
+            <button class="play-next player-icon"></button>
+        </div>
+            <audio class="audio" src="https://github.com/Dasha-Vr/music/blob/main/muzyka-dlya-relaksacii-26%20(mp3cut.net).mp3?raw=true"></audio>
+            <div class="song-title">Relax 1</div>
+            <input 
+            type="range" 
+            id="progress-bar" 
+            min="0" 
+            max="" 
+            value="0" 
+            onchange="changeProgressBar()"
+        />
+            <div class="durationTime"></div>
+            <div class="currentTime"></div>
+            <div class="sound">
+            <button class="muteButton"></button>
+            <input id="soundVolume" value="50" type="range" min="0" max="1" step="0.01" />
+            
+        </div>
+            <ul class="play-list">
+                
+                
+            </ul>
+        </div>
+        <div class="weather">
+        <input type="text" value="Minsk" class="city">
+        <div class="space"></div>
+        <i class="weather-icon owf"></i>
+        <div class="temperature"></div>
+        <div class="weather-description"></div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
+    </div>
+</div>
+    </header>
+    <main class="main">
+    <div class="time"></div>
+    <div class="date"></div>
+    <div class="greet">
+    <div class="greeting"></div>
+    <input type="text" value="Enter name" class="names">
+</div>
+    <div class="slider-icons">
+        <button class="slide-prev slider-icon"></button>
+        <button class="slide-next slider-icon"></button>
+    </div> 
+</main>
+<footer>
+    <div class="quote"></div>
+    <div class="author"></div>
+    <button class="change-quote"></button>
+    <div class="footer-cont">
+    <div class="year-link">
+        <p class="footer-text">©2023</p>
+        <a class="github-link" href="https://github.com/Dasha-Vr">Dasha-Vr</a>
+    </div>
+    <div class="logo-cont">
+    <a class="logo" href="https://rs.school/js-stage0/"><img class="logo-rs" src="https://rs.school/images/rs_school_js.svg" alt="logo"></a>
+    <button class='api-button'>Unsplash / GitHub</button>
+    <button class="api-button-flickr">Flickr / GitHub</button>
+    <button class="settings"></button>
+    <div class="settings-block">
+        <div class="Sett-name">Settings</div>
+        <div class="API">Image collection</div>
+            <button class="Unsplash buttonSET">Unsplash</button>
+            <button class="Flickr buttonSET">Flickr</button>
+            <button class="Github buttonSET">GitHub</button>
+    
+    <div class="language-descr">Language</div> 
+    <button class="language-button buttonSET">English</button>
+    <div class= "hideBlocks">Blocks</div>
+    <button class="hideWeather buttonSET">Weather</button>
+    <button class="hidePlayer buttonSET" >Player</button>
+    <button class="hidetime buttonSET">Time</button>
+    <button class="hideDate buttonSET">Date</button>
+    <button class="higeGreet buttonSET">Greetings</button>
+    <button class = "hideQuote buttonSET">Quote</button>
+</div>
+    <button class="language"></button>
+</div>
+</div>
+</div>
+</footer>
+    
+    <script type="module" src="index.js"></script>
+</div>
+</body>
+</html>
